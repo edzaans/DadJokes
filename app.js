@@ -15,6 +15,7 @@ const getDadJoke = async() => {
         // Add headers requested by API
         const config = {headers: {Accept: "application/json"}};
         const response = await axios.get('https://icanhazdadjoke.com/',config);
+        //Log data returned
         console.log(response.data.joke); 
         return response.data.joke;
     }
@@ -45,6 +46,7 @@ const jokeSearch = async() => {
         const config = {headers: {Accept: "application/json"}};
         const response = await axios.get(`https://icanhazdadjoke.com/search?term=${searchJoke.value}`,config);
         const jokesArray = response.data.results;
+        // Log all data returned
         console.log(jokesArray);
         return jokesArray;
     }
@@ -58,6 +60,7 @@ const jokeSearch = async() => {
 const searchResult = async () => {
     let jokeText2 = await jokeSearch();
     jokeDisplay.append(randomJoke);
+    // Display first joke in array
     randomJoke.textContent = jokeText2[1].joke;
     return jokeText2;
 }
@@ -73,6 +76,7 @@ let i = 0;
 const nextJoke = async() => {
     let searchTest = await searchResult();
     i += 1;
+    //Log returned data
     console.log("This is a test joke : "+searchTest[i].joke);
     jokeDisplay.append(randomJoke);
     randomJoke.textContent = searchTest[i].joke;
