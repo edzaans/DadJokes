@@ -1,0 +1,42 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200;1,500&display=swap');
+ */
+body {
+    background: aqua;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+#test {
+    background: grey;
+}
+
+#jokeDisplay {
+    padding-top: 20px;
+    height: 200px;
+    background: rgb(240, 243, 243);
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.container {
+    background: rgb(238, 236, 233);
+    border-radius: 10px;
+}
+
+
+    .button {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background: rgb(41, 176, 218);
+        padding: 10px;
+        border-radius: 4px;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+        border: none;
+      }
+
+      .glow-button:hover {
+        color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 25px rgba(5, 238, 238, 0.856);
+      }
